@@ -17,12 +17,12 @@
 
 if [ -d "./.git" ];then
 clear
-echo "\033[32m  _____ _ _                 _        _____           _ __      ____   ___ ___  \033[0m"
-echo "\033[32m / ____(_) |     /\        | |      |  __ \         | |\ \    / /_ | / _ \__ \ \033[0m"
-echo "\033[32m| |  __ _| |_   /  \  _   _| |_ ___ | |__) |   _ ___| |_\ \  / / | || | | | ) | \033[0m"
-echo "\033[32m| | |_ | | __| / /\ \| | | | __/ _ \|  ___/ | | / __| '_ \ \/ /  | || | | |/ / \033[0m"
-echo "\033[32m| |__| | | |_ / ____ \ |_| | || (_) | |   | |_| \__ \ | | \  /   | || |_| / /_ \033[0m"
-echo "\033[32m \_____|_|\__/_/    \_\__,_|\__\___/|_|    \__,_|___/_| |_|\/    |_(_)___/____|\033[0m"
+echo -e "\033[32m  _____ _ _                 _        _____           _ __      ____   ___ ___  \033[0m"
+echo -e "\033[32m / ____(_) |     /\        | |      |  __ \         | |\ \    / /_ | / _ \__ \ \033[0m"
+echo -e "\033[32m| |  __ _| |_   /  \  _   _| |_ ___ | |__) |   _ ___| |_\ \  / / | || | | | ) | \033[0m"
+echo -e "\033[32m| | |_ | | __| / /\ \| | | | __/ _ \|  ___/ | | / __| '_ \ \/ /  | || | | |/ / \033[0m"
+echo -e "\033[32m| |__| | | |_ / ____ \ |_| | || (_) | |   | |_| \__ \ | | \  /   | || |_| / /_ \033[0m"
+echo -e "\033[32m \_____|_|\__/_/    \_\__,_|\__\___/|_|    \__,_|___/_| |_|\/    |_(_)___/____|\033[0m"
 
 if [ "find ./ -name .DS_Store" ];then
 	find ./ -name .DS_Store -delete
@@ -43,36 +43,36 @@ else
 	fi
 fi
 
-echo "\033[41mAppuyer sur Entrée pour git status...\033[0m"
+echo -e "\033[41mAppuyer sur Entrée pour git status...\033[0m"
 read a
 clear
-echo "\033[35mgit status\033[0m"
+echo -e "\033[35mgit status\033[0m"
 git status
-echo "\033[41mAppuyer sur Entrée pour git add...\033[0m"
+echo -e "\033[41mAppuyer sur Entrée pour git add...\033[0m"
 read a
 
 clear
-echo "\033[35mgit add\033[0m"
+echo -e "\033[35mgit add\033[0m"
 git add *
-echo "\033[35mgit status\033[0m"
+echo -e "\033[35mgit status\033[0m"
 git status
-echo "\033[41mAppuyer sur Entrée pour git commit...\033[0m"
+echo -e "\033[41mAppuyer sur Entrée pour git commit...\033[0m"
 read a
 
 clear
-echo "\033[35mgit commit\033[0m"
-echo "commit name :"
+echo -e "\033[35mgit commit\033[0m"
+echo -e "commit name :"
 read commit
 git commit -m "$commit"
 
-echo "\033[41mAppuyer sur Entrée pour git push...\033[0m"
+echo -e "\033[41mAppuyer sur Entrée pour git push...\033[0m"
 read a
 clear
-echo "\033[35mgit push\033[0m"
+echo -e "\033[35mgit push\033[0m"
 git push
 git log
 else
-echo "\033[31mVeuillez executer le script depuis le repertoire ou ce trouve le dossier .git\033[0m"
+echo -e "\033[31mVeuillez executer le script depuis le repertoire ou ce trouve le dossier .git\033[0m"
 fi
 
 
